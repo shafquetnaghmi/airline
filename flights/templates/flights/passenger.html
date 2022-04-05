@@ -1,0 +1,33 @@
+{% extends 'flights/layout.html' %}
+
+
+{% block content %}
+<style>
+    .per{
+        display: grid;
+        grid-template-columns:100px 200px 50px 50px 200px ;
+    }
+    </style>
+    <div class="per">
+
+        <div>serial no <br> <br></div>
+        <div>Name <br> <br></div>
+        <div>Age <br> <br></div>
+        <div>Sex <br> <br></div>
+        <div>Flight <br> <br></div>
+        
+        </div>
+    
+{% for person in passenger %}
+<div class="per">
+
+    <div>{{person.id}}</div>
+    <div>{{person.First_name}} {{person.last_name}}</div>
+    <div>{{person.age}}</div>
+    <div>{{person.sex}}</div>
+    
+    
+</div>
+<br>
+{% endfor %}
+{% endblock %}
